@@ -55,7 +55,7 @@ python finetune.py --help
 
 ### Predict with trained model 
 
-Download and run best model on provided dataset file (`datasets/test_preprocessed.csv` by default).
+Download and run best model on provided dataset file (`datasets/test_preprocessed.csv` by default). Saves to `prediction.csv` by default.
 ```shell
 python predict.py
 ```
@@ -63,5 +63,18 @@ python predict.py
 For more information and additional parameters please refer to the script help
 ```shell
 python predict.py --help
+```
+
+
+### Evaluate
+
+Compute metrics having 2 files with `label` (or `true_label` and `pred_label`) column as input (`prediction.csv` and `datasets/test_preprocessed.csv` by default).
+```shell
+python evaluate.py
+```
+
+For more information and additional parameters please refer to the script help
+```shell
+python evaluate.py --help
 ```
 
